@@ -20,6 +20,7 @@ public class Function {
      * 1. curl -d "HTTP Body" {your host}/api/HttpExample
      * 2. curl "{your host}/api/HttpExample?name=HTTP%20Query"
      */
+    // dbpass : X7F!*Hmf>Vup&ZB
     @FunctionName("HttpExample")
     public HttpResponseMessage run(
             @HttpTrigger(
@@ -40,4 +41,5 @@ public class Function {
             return request.createResponseBuilder(HttpStatus.OK).body("Hello, " + name).build();
         }
     }
+    
 }
